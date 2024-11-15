@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="camAndMic.js" ></script>
     <title>Arbeitstage bis Ende des Jahres</title>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -82,5 +83,17 @@
             });
         }
     </script>
+    <div class="columns">
+        <div class="column">
+          <p><button type="button" onclick="getStream('video')">Grab video</button></p>
+          
+          <video controls autoplay style="height:180px; width: 240px;"></video>
+        </div>
+        <div class="column">
+          <p><button type="button" onclick="getStream('audio')">Grab audio</button></p>
+          
+          <audio controls></audio>
+        </div>
+      </div>
 </body>
 </html>
